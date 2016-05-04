@@ -1,29 +1,15 @@
-let Dog = function (traitsPassed) {
 
-  let traits = traitsPassed || {};
+let Dog = function (params) {
 
-  this.name = traits.name;
-  this.status = traits.happy;
-  this.color = traits.black;
+  let localParams = params || {};
+
+  this.status = 'normal';
+  this.color = localParams.color || 'black';
+  this.hungry = false;
+
 }
 
-
-// function testRunner (sadie, moonshine, atticus, mason, julia) {
-//
-//   it("should make Sadie happy when Mason pets her", function(){
-//     expect(sadie.status).toBe('normal');
-//     mason.pet(sadie);
-//     expect(sadie.status).toBe('happy');
-//   });
-
-
-
-
-
-
-
-
-
-
-
 export default Dog;
+
+
+//ternary  for  hungry = undefined  if undefined = true  else is false (set it to what is was)

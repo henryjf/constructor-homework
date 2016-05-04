@@ -1,18 +1,14 @@
-let Human = function (passedTraits) {
-  let traits = passedTraits || {};;
+let Human = function () {
+  this.pet = function(petObj){
+    petObj.status = 'happy';
+  };
 
-  this.name = traits.name;
-  this.owner= traits.owner;
-  
+  this.feed = function(petObj){
+    petObj.hungry =false;
+};
+  this.make = function(petObj){
+    petObj.cool = true;
+  }
+};
 
-}
-
-
-// function testRunner (sadie, moonshine, atticus, mason, julia) {
-//
-//   it("should make Sadie happy when Mason pets her", function(){
-//     expect(sadie.status).toBe('normal');
-//     mason.pet(sadie);
-//     expect(sadie.status).toBe('happy');
-//   });
 export default Human;
