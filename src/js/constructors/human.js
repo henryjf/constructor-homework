@@ -1,14 +1,19 @@
-let Human = function () {
+let Human = function (params) {
+
+  let localParams = params || {};
+
   this.pet = function(petObj){
     petObj.status = 'happy';
   };
 
   this.feed = function(petObj){
-    petObj.hungry =false;
+    petObj.hungry = false;
 };
-  this.make = function(petObj){
-    petObj.cool = true;
-  }
+
+this.cool = (localParams.cool === undefined) ? false : localParams.cool;
+  // function make(item){
+  //   item.cool = true;
+  // }
 };
 
 export default Human;

@@ -3,10 +3,11 @@ let Dog = function (params) {
 
   let localParams = params || {};
 
+  // let hunger = (localParams.hungry=== undefined) ? true : localParams.hungry;
+
   this.status = 'normal';
   this.color = localParams.color || 'black';
-  this.hungry = false;
-
+  this.hungry = (localParams.hungry=== undefined) ? true : localParams.hungry;
 }
 
 export default Dog;
